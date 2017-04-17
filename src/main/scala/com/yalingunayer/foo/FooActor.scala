@@ -11,7 +11,7 @@ class FooActor extends Actor {
   def receive = {
     case s: String => {
       println(f"Received a message: $s")
-      sender ! f"Hello!" 
+      sender ! f"Hello from ${self.path}!" 
     }
   }
   
